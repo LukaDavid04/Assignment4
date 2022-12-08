@@ -1,0 +1,3 @@
+/Users/khaitran/Documents/School Documents/CSI2372/Assignment4/Khai/cmake-build-debug/CMakeFiles/asg02.dir
+/Users/khaitran/Documents/School Documents/CSI2372/Assignment4/Khai/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/khaitran/Documents/School Documents/CSI2372/Assignment4/Khai/cmake-build-debug/CMakeFiles/rebuild_cache.dir
