@@ -58,6 +58,12 @@ build CMakeFiles/asg04.dir/Graph.cpp.o: CXX_COMPILER__asg04_Debug /Users/khaitra
   OBJECT_DIR = CMakeFiles/asg04.dir
   OBJECT_FILE_DIR = CMakeFiles/asg04.dir
 
+build CMakeFiles/asg04.dir/Forest.cpp.o: CXX_COMPILER__asg04_Debug /Users/khaitran/Documents/School$ Documents/CSI2372/Assignment4/asg04/Forest.cpp || cmake_object_order_depends_target_asg04
+  DEP_FILE = CMakeFiles/asg04.dir/Forest.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -fcolor-diagnostics -std=gnu++14
+  OBJECT_DIR = CMakeFiles/asg04.dir
+  OBJECT_FILE_DIR = CMakeFiles/asg04.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target asg04
@@ -66,7 +72,7 @@ build CMakeFiles/asg04.dir/Graph.cpp.o: CXX_COMPILER__asg04_Debug /Users/khaitra
 #############################################
 # Link the executable asg04
 
-build asg04: CXX_EXECUTABLE_LINKER__asg04_Debug CMakeFiles/asg04.dir/main.cpp.o CMakeFiles/asg04.dir/Graph.cpp.o
+build asg04: CXX_EXECUTABLE_LINKER__asg04_Debug CMakeFiles/asg04.dir/main.cpp.o CMakeFiles/asg04.dir/Graph.cpp.o CMakeFiles/asg04.dir/Forest.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk
   OBJECT_DIR = CMakeFiles/asg04.dir
   POST_BUILD = :

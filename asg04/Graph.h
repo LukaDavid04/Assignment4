@@ -20,7 +20,7 @@ class Node
 
 class Graph
 {
-private:
+protected:
     Node** arrayList;
     int size;
 public:
