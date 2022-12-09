@@ -9,7 +9,7 @@
 
 class Forest : public Graph {
 public:
-    void add_edge(int, int);
+    bool add_edge(int, int);
     bool checkCycle();
     bool checkCycle(int, int, vector<bool> &visited);
 };

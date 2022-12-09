@@ -10,16 +10,14 @@
 
 using namespace std;
 
-class Node
-{
+class Node {
+public:
     friend class Graph;
-    int data;
     Node* next;
-    //friend ostream;
+    int data;
 };
 
-class Graph
-{
+class Graph {
 protected:
     Node** arrayList;
     int size;
