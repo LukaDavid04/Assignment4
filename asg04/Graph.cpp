@@ -40,13 +40,29 @@ Graph::Graph(const Graph& gr)
 {
     int i;
     size = 0;
-    arrayList = new Node*[gr.size];
+    arrayList = new Node * [gr.size];
     if (arrayList == NULL) cout << "Not enough memory" << endl;
     else {
+        size = gr.size;
+        
+        for (int i = 0; i < size; ++i)
+        {
+            arrayList[i] = new Node();
+            arrayList[i] = NULL;
+        }
+        
         for (int i = 0; i < gr.size; ++i)
         {
-            arrayList[i] = gr.arrayList[i];
-            size = gr.size;
+            Node* current;
+
+            if (gr.arrayList[i] == NULL)
+            {
+                continue;
+            }
+
+            for (current = gr.arrayList[i]; current != NULL; current = current->next) {
+                add_edge(i + 1, current->data);
+            }
         }
     }
 }
@@ -59,6 +75,8 @@ Graph::~Graph()
 bool Graph::add_edge(int a, int b)
 {
     if (a < 0 || a > size || b < 0 || b > size || a == b ) return false;
+    if (edge_exist(a, b)) return false;
+
 
     Node* current;
     Node* new_node = new Node;
@@ -398,6 +416,7 @@ int* Graph::BFS(int a)
         }
 
     }
+    cout << " " << endl;
     return bfs;
 }
 

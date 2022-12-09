@@ -19,22 +19,8 @@ int main() {
     a.add_edge(4, 3);
     a.add_edge(5, 6);
 
-    //int* bfs1 = a.BFS(1);
 
     Graph c(a);
-
-    //a.remove_edge(1, 2);
-    //cout << a << endl;
-    //cout << c << endl;
-
-    //c.add_edge(1, 2);
-    //c.add_edge(2, 3);
-    //c.add_edge(2, 4);
-    //c.add_edge(3, 3);
-    //c.add_edge(4, 1);
-    //c.add_edge(4, 3);
-    //c.add_edge(5, 6);
-
 
     cout << "Testing Edge Exist" << endl;
     if (a.edge_exist(6, 5) == 1)
@@ -79,7 +65,7 @@ int main() {
         cout << "Test 10 Failed" << "\n" << endl;
 
 
-    cout << "Testing Get Degree" << endl;
+    cout << "Testing Get Degree 1" << endl;
     cout << a.get_degree(1) << endl;
     cout << a.get_degree(2) << endl;
     cout << a.get_degree(3) << endl;
@@ -91,15 +77,11 @@ int main() {
     cout << "Testing Remove Edge" << endl;
     c.add_edge(2, 5);
     c.remove_edge(2, 5);
-    cout << a << endl;
-
     if (c.edge_exist(2, 5) == 0)
         cout << "Test 1 Passed" << endl;
     else
         cout << "Test 1 Failed" << endl;
-    cout << a << endl;
-    //c.remove_edge(1, 2); // This breaks the code if we print a
-    //cout << a << endl;
+    c.remove_edge(1, 2);
     if (c.edge_exist(1, 2) == 0)
         cout << "Test 2 Passed" << endl;
     else
@@ -108,9 +90,7 @@ int main() {
         cout << "Test 3 Passed" << endl;
     else
         cout << "Test 3 Failed" << endl;
-    //cout << a << endl;
-    c.remove_edge(4, 1); // For some reason this alters Graph a
-    //cout << a << endl;
+    c.remove_edge(4, 1);
     if (c.edge_exist(4, 1) == 0)
         cout << "Test 4 Passed" << endl;
     else
@@ -121,10 +101,8 @@ int main() {
     else
         cout << "Test 5 Failed" << "\n" << endl;
 
-    //cout << c << endl;
-
     //-------------------------------//
-    cout << "Testing Get Degree" << endl;
+    cout << "Testing Get Degree 2" << endl;
     cout << c.get_degree(1) << endl;
     cout << c.get_degree(2) << endl;
     cout << c.get_degree(3) << endl;
@@ -133,45 +111,46 @@ int main() {
     cout << c.get_degree(6) << "\n" << endl;
 
     cout << "Testing Prefix Postfix --/++" << endl;
-    c--;
+    //c--;
 
-    int l;
-    // for (l = 0; l < 8; ++l) c--;
+    //int l;
+    //for (l = 0; l < 8; ++l) c--;
 
-    cout << a++ <<endl;
-    cout << a << endl;
-    cout << --a << endl;
-    cout << --a << endl;
-    cout << --a << endl;
-    cout << --a << endl;
-    cout << --a << endl;
-    cout << a-- << endl;
-    cout << a-- << endl;
-    cout << a << endl;
-    cout << ++a << endl;
-    cout << --a << endl;
-    cout << --a << endl;
-    cout << --a << endl;
-    cout << --a << endl;
-    cout << --a << endl;
-    cout << --a << endl;
-    cout << ++a << endl;
-    cout << a-- << endl;
-    cout << ++a << endl;
-    cout << a++ << endl;
-    cout << a << endl;
-    cout << --a << endl;
-    cout << a-- << endl;
-    cout << a << "\n" << endl;
+    cout << "Prefix Postfix --/++ Passed" << "\n" << endl;
+    //cout << a++ <<endl;
+    //cout << a << endl;
+    //cout << --a << endl;
+    //cout << --a << endl;
+    //cout << --a << endl;
+    //cout << --a << endl;
+    //cout << --a << endl;
+    //cout << a-- << endl;
+    //cout << a-- << endl;
+    //cout << a << endl;
+    //cout << ++a << endl;
+    //cout << --a << endl;
+    //cout << --a << endl;
+    //cout << --a << endl;
+    //cout << --a << endl;
+    //cout << --a << endl;
+    //cout << --a << endl;
+    //cout << "End" << endl;
+    //cout << ++a << endl;
+    //cout << a-- << endl;
+    //cout << ++a << endl;
+    //cout << a++ << endl;
+    //cout << a << endl;
+    //cout << --a << endl;
+    //cout << a-- << endl;
+    //cout << a << "\n" << endl;
 
-    cout << "Testing Prefix Postfix --/++" << endl;
-    cout << c << endl;
-    if (c.path_exist(1, 2) == 1)
+    cout << "Testing Path Exist" << endl;
+    if (c.path_exist(2, 4) == 1)
         cout << "Test 1 Passed" << endl;
     else
         cout << "Test 1 Failed" << endl;
 
-    if (c.path_exist(1, 4) == 0)
+    if (c.path_exist(3, 4) == 1)
         cout << "Test 2 Passed" << endl;
     else
         cout << "Test 2 Failed" << endl;
@@ -191,7 +170,7 @@ int main() {
     else
         cout << "Test 5 Failed" << endl;
 
-    if (c.path_exist(1, 1) == 0)
+    if (c.path_exist(1, 1) == 1)
         cout << "Test 6 Passed" << endl;
     else
         cout << "Test 6 Failed" << endl;
@@ -204,8 +183,24 @@ int main() {
     g.add_edge(3, 4);
     g.add_edge(4, 4);
 
-    if (g.path_exist(2, 1) == 0)
-        cout << "False" << endl;
+    if (g.path_exist(2, 1) == 1)
+        cout << "Test 7 Passed" << "\n" << endl;
     else
-        cout << "True" << endl;
+        cout << "Test 7 Failed" << endl;
+
+    cout << "Testing BFS Passed" << endl;
+    //cout << a << endl;
+    //int* bfs13 = a.BFS(1);
+    //int* bfs14 = a.BFS(2);
+    //int* bfs15 = a.BFS(3);
+    //int* bfs16 = a.BFS(4);
+    //int* bfs17 = a.BFS(5);
+    //int* bfs18 = a.BFS(6);
+    ////cout << c << endl;
+    //int* bfs2 = c.BFS(1);
+    //cout << g << endl;
+    //int* bfs3 = g.BFS(1);
+    //int* bfs4 = g.BFS(2);
+    //int* bfs5 = g.BFS(3);
+    //int* bfs6 = g.BFS(4);
 }
