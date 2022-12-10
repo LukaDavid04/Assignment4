@@ -1,5 +1,10 @@
+// Luka David 300134324
+// Khai Tran 300112587
+
 #include <iostream>
 #include "Graph.h"
+#include "Forest.h"
+#include "Tree.h"
 
 using namespace std;
 
@@ -188,7 +193,7 @@ int main() {
     else
         cout << "Test 7 Failed" << endl;
 
-    cout << "Testing BFS Passed" << endl;
+    cout << "Testing BFS Passed" << "\n" << endl;
     //cout << a << endl;
     //int* bfs13 = a.BFS(1);
     //int* bfs14 = a.BFS(2);
@@ -203,4 +208,18 @@ int main() {
     //int* bfs4 = g.BFS(2);
     //int* bfs5 = g.BFS(3);
     //int* bfs6 = g.BFS(4);
+
+    Forest f(6);
+    
+    //f.print();
+    
+    f.add_edge(1, 2);
+    f.add_edge(2, 3);
+    f.add_edge(2, 4);
+    f.add_edge(3, 3);
+    f.add_edge(4, 1);
+    f.add_edge(4, 3);
+    f.add_edge(5, 6);
+    
+    cout << f << endl;
 }

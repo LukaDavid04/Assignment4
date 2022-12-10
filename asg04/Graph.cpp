@@ -1,3 +1,6 @@
+// Luka David 300134324
+// Khai Tran 300112587
+
 #include <iostream>
 #include "Graph.h"
 #include <string>
@@ -134,6 +137,8 @@ bool Graph::add_edge(int a, int b)
 
 bool Graph::edge_exist(int a, int b)
 {
+    if (a < 0 || a > size || b < 0 || b > size || a == b) return false;
+
     Node* current;
 
     if (arrayList[a - 1] == NULL)
@@ -342,6 +347,8 @@ Graph Graph::operator --(int a)
 
 bool Graph::path_exist(int a, int b)
 {
+    if (a < 0 || a > size || b < 0 || b > size || a == b) return false;
+
     if (edge_exist(a, b)) return true;
     Node* current;
 

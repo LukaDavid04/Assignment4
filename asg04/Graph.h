@@ -1,23 +1,24 @@
-//
-// Created by Khai Tran on 2022-12-08.
-//
+// Luka David 300134324
+// Khai Tran 300112587
 
-#ifndef ASG04_GRAPH_H
-#define ASG04_GRAPH_H
+//#ifndef ASG04_GRAPH_H
+//#define ASG04_GRAPH_H
 
+#pragma once
 #include <iostream>
 #include <list>
 
 using namespace std;
 
-class Node {
-public:
+class Node
+{
     friend class Graph;
     Node* next;
     int data;
 };
 
-class Graph {
+class Graph
+{
 protected:
     Node** arrayList;
     int size;
@@ -42,4 +43,4 @@ public:
 };
 
 
-#endif //ASG04_GRAPH_H
+//#endif //ASG04_GRAPH_H
